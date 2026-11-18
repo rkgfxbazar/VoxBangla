@@ -1,0 +1,33 @@
+GitHub Actions দিয়ে EXE Build — দ্রুত নির্দেশিকা
+
+কেন GitHub?
+GitHub Actions GitHub-hosted Windows runner চালায়। তাই Windows EXE Windows-এই
+Build হয়। PyInstaller Python interpreter ও প্রয়োজনীয় packages-সহ one-file EXE
+bundle করে; end-user PC-তে Python আলাদা করে লাগবে না।
+
+A. Repository তৈরি
+1. GitHub-এ লগইন করুন।
+2. New repository নির্বাচন করুন।
+3. Repository name: VoxBangla
+4. Public বা Private বেছে Create repository চাপুন।
+
+B. ফাইল আপলোড
+1. এই ZIP Extract করুন।
+2. Extract করা ফোল্ডারের ভেতরের সব ফাইল/ফোল্ডার নির্বাচন করুন।
+3. GitHub repository-তে Add file → Upload files নির্বাচন করে আপলোড করুন।
+4. .github/workflows/build-windows.yml path অক্ষত রাখুন।
+5. Commit changes চাপুন।
+
+C. EXE সংগ্রহ
+1. Repository-র Actions tab খুলুন।
+2. Build VoxBangla for Windows নির্বাচন করুন।
+3. চলমান workflow run-এ ক্লিক করুন।
+4. সম্পন্ন হলে Artifacts থেকে VoxBangla-Windows-x64.zip ডাউনলোড করুন।
+5. ZIP Extract করে VoxBangla.exe চালান।
+
+D. পরে নতুন build
+কোডে পরিবর্তন করে main branch-এ নতুন commit করলে build আবার শুরু হবে।
+অথবা Actions → Build VoxBangla for Windows → Run workflow ব্যবহার করুন।
+
+নোট: এই প্যাকেজে workflow প্রস্তুত আছে, কিন্তু আপনার GitHub account-এ repository
+তৈরি বা upload করা হয়নি। GitHub-এ push না হওয়া পর্যন্ত cloud build শুরু হবে না।

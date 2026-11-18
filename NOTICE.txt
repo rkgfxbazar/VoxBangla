@@ -1,0 +1,6 @@
+Third-party components:
+- SpeechRecognition: speech recognition integration (see its PyPI/GitHub project for license details).
+- PyAudio: microphone capture.
+- PyAutoGUI and pyperclip: clipboard paste automation.
+- bijoy-unicode 1.0.1: Unicode <-> Bijoy Classic text conversion, MIT licensed.
+This project does not include or distribute Avro Keyboard, Bijoy Keyboard, or proprietary fonts.
