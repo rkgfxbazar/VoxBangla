@@ -56,12 +56,10 @@ jobs:
           Copy-Item '.\\NOTICE.txt' '.\\release\\NOTICE.txt'
           Compress-Archive -Path '.\\release\\*' -DestinationPath '.\\VoxBangla-Windows-x64.zip' -Force
 
-      - name: Upload EXE and ZIP as workflow artifacts
+      - name: Upload compact download package
         uses: actions/upload-artifact@v4
         with:
           name: VoxBangla-Windows-x64
-          path: |
-            dist/VoxBangla.exe
-            VoxBangla-Windows-x64.zip
+          path: VoxBangla-Windows-x64.zip
           if-no-files-found: error
           retention-days: 30
